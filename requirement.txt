@@ -1,0 +1,4 @@
+playsound
+gTTS
+django
+num2words
