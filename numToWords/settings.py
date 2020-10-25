@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path, os
+from read_init import get_init_config as config
+import logging as log
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +27,10 @@ SECRET_KEY = 'u@tq6^+s6+f+zy6%^53-=zxusv*nezx5m1*5_iptry1sc*!v3*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+config = config()
+ALLOWED_HOSTS = config["ALLOWED_HOSTS"]
 
+log.info(ALLOWED_HOSTS)
 
 # Application definition
 
