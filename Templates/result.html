@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content%} {% load bootstrap4 %}
+<div>
+  <div><p class="text-center">Input Number {{num}}</p></div>
+  <div><p class="text-center">{{result}}</p></div>
+
+  <div class="text-center">
+    <button
+      class="btn btn-primary btn-sm"
+      onclick="window.location.href='http://127.0.0.1:8000/'"
+    >
+      Back</button
+    ><button type="submit" name="play" class="btn btn-primary btn-sm">
+      play
+    </button>
+  </div>
+  {% endblock %}%}
+</div>

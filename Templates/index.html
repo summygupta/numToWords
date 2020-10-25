@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content%} {% load bootstrap4 %}
+<div onload='document.form1.text1.focus()' >
+<h1 class="text-center">Hello User, please enter the number</h1>
+</br>
+  <form action="numToWord" method="post" class="form" >
+    {% csrf_token %}
+    </br>
+    <div class="input-group">
+    <input type="text" name="num" class="form-control" id="input1" max="1000000"/>
+    <button type="submit" class="btn btn-primary btn-sm" onclick="allnumeric('input1')">Convert</button>
+    </div>
+    
+   
+  </form>
+</div>
+
+{% endblock %}%}
